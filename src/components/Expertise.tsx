@@ -97,7 +97,7 @@ const Expertise: React.FC = () => {
                                                         animate={{ opacity: 1, y: 0 }}
                                                         transition={{ delay: compIndex * 0.05 }}
                                                     >
-                                                        <h4 className={styles.competencyTitle}>{competency.category}</h4>
+                                                        <h4 className={styles.competencyTitle}>{competency.title}</h4>
                                                         <ul className={styles.competencyItems}>
                                                             {competency.items.map((item, itemIndex) => (
                                                                 <li key={itemIndex}>{item}</li>
