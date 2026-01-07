@@ -358,8 +358,7 @@ export const expertiseAreas: ExpertiseArea[] = [
 export const summary: string = `AI Research Lead with expertise in reinforcement learning, adversarial robustness, and large language/vision model fine-tuning. Proven track record in leading multi-disciplinary teams, architecting scalable data pipelines, and optimizing training/inference costs. Specialized in Parameter-Efficient Fine-Tuning (PEFT), advanced retrieval-augmented generation (RAG), and SOTA agent frameworks. Skilled in upskilling teams on LLMs and deploying production-grade AI solutions.`;
 
 export const achievements: string[] = [
-    "All India Rank (AIR) 1224 in GATE 2021",
-    "Indian AI Summit Delegate representing C-DAC",
-    "Contributed to IIT Mandi iHub proposal on Low-Resource Language Preservation using LLMs",
-    "Developed multiple production chatbots and forensics data analysis tools",
+    "Improved adversarial robustness by 35% through PPO-based RL techniques",
+    "Built generalized data pipeline supporting 52 file extensions for dataset loading",
+    "Developed multiple production chatbots and forensic data analysis tools",
 ];
