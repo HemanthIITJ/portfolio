@@ -23,7 +23,7 @@ const About: React.FC = () => {
                         <div className={styles.photoWrapper}>
                             <div className={styles.photoCard}>
                                 <img
-                                    src="/images/profile.png"
+                                    src={`${import.meta.env.BASE_URL}images/profile.png`}
                                     alt="Hemanth Kandimalla - Professional Photo"
                                     className={styles.profilePhoto}
                                 />

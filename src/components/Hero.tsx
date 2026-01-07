@@ -104,7 +104,7 @@ const Hero: React.FC = () => {
                 >
                     <div className={styles.photoFrame}>
                         <img
-                            src="/images/hero.png"
+                            src={`${import.meta.env.BASE_URL}images/hero.png`}
                             alt="Hemanth Kandimalla - AI Research Lead"
                             className={styles.photo}
                         />
