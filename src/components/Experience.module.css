@@ -1,0 +1,185 @@
+/**
+ * Experience Section Styles - Ultra-Premium Card Design
+ * Sophisticated borders, premium hover effects, elegant classic icons
+ */
+
+.section {
+    background: var(--color-black-pure);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--space-16);
+}
+
+.header h2 {
+    margin-bottom: var(--space-4);
+}
+
+.subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+}
+
+/* Premium Card Design */
+.educationCard,
+.experienceCard {
+    position: relative;
+    padding: var(--space-10);
+    background: linear-gradient(135deg, #0A0A0A 0%, #050505 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-2xl);
+    transition: all var(--duration-base) var(--ease-out);
+    overflow: hidden;
+}
+
+/* Premium inner glow effect */
+.educationCard::before,
+.experienceCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--radius-2xl);
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(255, 69, 0, 0.2), rgba(255, 255, 255, 0.05));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity var(--duration-base) var(--ease-out);
+    pointer-events: none;
+}
+
+.educationCard:hover::before,
+.experienceCard:hover::before {
+    opacity: 1;
+}
+
+.educationCard {
+    margin-bottom: var(--space-12);
+}
+
+.educationCard:hover,
+.experienceCard:hover {
+    border-color: rgba(255, 69, 0, 0.5);
+    transform: translateY(-4px);
+    box-shadow:
+        0 20px 40px -10px rgba(0, 0, 0, 0.8),
+        0 0 40px -10px rgba(255, 69, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.cardHeader {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-6);
+    gap: var(--space-4);
+    flex-wrap: wrap;
+}
+
+.cardHeader h3 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-2);
+    background: linear-gradient(135deg, #FFFFFF 0%, #CCCCCC 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.degree,
+.position {
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    font-weight: var(--font-weight-normal);
+}
+
+.meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--space-2);
+}
+
+.duration,
+.location {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-tertiary);
+    padding: var(--space-2) var(--space-4);
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.gpa {
+    font-size: var(--font-size-sm);
+    color: var(--color-red-primary);
+    font-weight: var(--font-weight-semibold);
+    padding: var(--space-2) var(--space-4);
+    background: linear-gradient(135deg, rgba(255, 69, 0, 0.1), rgba(255, 69, 0, 0.05));
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(255, 69, 0, 0.2);
+}
+
+.highlights,
+.achievements {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    position: relative;
+}
+
+.highlights li,
+.achievements li {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding-left: var(--space-2);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+    font-size: var(--font-size-base);
+}
+
+/* Classic premium chevron icon */
+.highlights li::before,
+.achievements li::before {
+    content: '';
+    flex-shrink: 0;
+    width: 6px;
+    height: 10px;
+    margin-top: 5px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 10" fill="none"><path d="M1 1L5 5L1 9" stroke="%23FF4500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center;
+    background-size: contain;
+}
+
+/* Timeline */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}
+
+.timelineItem {
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .cardHeader {
+        flex-direction: column;
+    }
+
+    .meta {
+        align-items: flex-start;
+    }
+
+    .educationCard,
+    .experienceCard {
+        padding: var(--space-8);
+    }
+}

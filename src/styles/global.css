@@ -1,0 +1,245 @@
+/**
+ * Global Styles - Ultra-Premium Cursor.com Aesthetic
+ * Pure black backgrounds, crisp typography, minimal design
+ */
+
+@import './tokens.css';
+
+/* Modern CSS Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Root - Optimized for High-DPI Displays */
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'kern' 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Body - Pure Black Premium Background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--line-height-normal);
+    color: var(--color-text-primary);
+    background-color: var(--color-black-pure);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Typography - Clean Hierarchy */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: var(--font-family-primary);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-tight);
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 6vw, var(--font-size-8xl));
+    font-weight: var(--font-weight-bold);
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, var(--font-size-6xl));
+}
+
+h3 {
+    font-size: clamp(1.5rem, 3vw, var(--font-size-4xl));
+}
+
+h4 {
+    font-size: var(--font-size-2xl);
+}
+
+p {
+    margin: 0;
+    line-height: var(--line-height-relaxed);
+}
+
+/* Links - Red Accent Hover */
+a {
+    color: var(--color-text-primary);
+    text-decoration: none;
+    transition: color var(--duration-fast) var(--ease-out);
+}
+
+a:hover {
+    color: var(--color-red-primary);
+}
+
+a:focus-visible {
+    outline: 2px solid var(--color-red-primary);
+    outline-offset: 4px;
+    border-radius: var(--radius-sm);
+}
+
+/* Buttons - Clean Minimal Style */
+button {
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+button:focus-visible {
+    outline: 2px solid var(--color-red-primary);
+    outline-offset: 4px;
+    border-radius: var(--radius-sm);
+}
+
+/* Lists */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Media - Responsive */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Forms */
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+/* Selection - Red Accent */
+::selection {
+    background-color: var(--color-red-primary);
+    color: var(--color-white-pure);
+}
+
+::-moz-selection {
+    background-color: var(--color-red-primary);
+    color: var(--color-white-pure);
+}
+
+/* Scrollbar - Minimal Dark Styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-black-pure);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-gray-700);
+    border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gray-600);
+}
+
+/* Container - Max Width for Content */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--space-6);
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 var(--space-8);
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 var(--space-12);
+    }
+}
+
+@media (min-width: 1536px) {
+    .container {
+        padding: 0 var(--space-16);
+    }
+}
+
+/* Section Spacing */
+section {
+    padding: var(--space-24) 0;
+}
+
+@media (min-width: 768px) {
+    section {
+        padding: var(--space-32) 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    section {
+        padding: var(--space-40) 0;
+    }
+}
+
+/* Utility Classes */
+.text-gradient {
+    background: linear-gradient(135deg, var(--color-red-primary) 0%, var(--color-red-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
