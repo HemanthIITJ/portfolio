@@ -1,5 +1,5 @@
 /**
- * Contact Section Styles - Ultra-Premium Design with Enhanced Buttons
+ * Contact Section Styles - Ultra-Premium Design with Glow Effects
  */
 
 .section {
@@ -85,36 +85,39 @@
     background-clip: text;
 }
 
-.infoList {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-4);
-    margin-bottom: var(--space-8);
-}
-
-.infoItem {
+/* Email Container */
+.emailContainer {
     display: flex;
     align-items: center;
     gap: var(--space-4);
-    padding: var(--space-4);
-    color: var(--color-text-secondary);
-    font-size: var(--font-size-base);
-    background: rgba(255, 255, 255, 0.02);
+    padding: var(--space-6);
+    margin-bottom: var(--space-8);
+    background: rgba(255, 255, 255, 0.03);
     border-radius: var(--radius-lg);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     transition: all var(--duration-fast) var(--ease-out);
 }
 
-.infoItem:hover {
-    color: var(--color-text-primary);
-    background: rgba(255, 255, 255, 0.04);
-    border-color: rgba(255, 69, 0, 0.2);
+.emailContainer:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 69, 0, 0.3);
 }
 
 .icon {
     width: 24px;
     height: 24px;
     flex-shrink: 0;
+    color: var(--color-red-primary);
+}
+
+.emailLink {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-base);
+    transition: color var(--duration-fast) var(--ease-out);
+    text-decoration: none;
+}
+
+.emailLink:hover {
     color: var(--color-red-primary);
 }
 
@@ -176,6 +179,7 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
+/* Achievement List with Premium Glow */
 .achievementsList {
     display: flex;
     flex-direction: column;
@@ -184,24 +188,51 @@
 }
 
 .achievementsList li {
+    position: relative;
     display: flex;
     align-items: flex-start;
     gap: var(--space-4);
-    padding: var(--space-4);
+    padding: var(--space-5);
     color: var(--color-text-secondary);
     font-size: var(--font-size-base);
     line-height: var(--line-height-relaxed);
-    background: rgba(255, 255, 255, 0.02);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
     border-radius: var(--radius-lg);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-left: 3px solid var(--color-red-primary);
-    transition: all var(--duration-fast) var(--ease-out);
+    transition: all var(--duration-base) var(--ease-out);
+    cursor: pointer;
+}
+
+/* Premium glow effect on hover */
+.achievementsList li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--radius-lg);
+    background: radial-gradient(circle at center,
+            rgba(255, 69, 0, 0.15) 0%,
+            transparent 70%);
+    opacity: 0;
+    transition: opacity var(--duration-base) var(--ease-out);
+    pointer-events: none;
+}
+
+.achievementsList li:hover::after {
+    opacity: 1;
 }
 
 .achievementsList li:hover {
-    background: rgba(255, 255, 255, 0.04);
+    background: linear-gradient(135deg, rgba(255, 69, 0, 0.08) 0%, rgba(255, 69, 0, 0.03) 100%);
+    border-color: rgba(255, 69, 0, 0.4);
     border-left-color: var(--color-red-light);
-    transform: translateX(4px);
+    transform: translateX(8px);
+    box-shadow:
+        0 8px 20px rgba(255, 69, 0, 0.15),
+        0 0 30px rgba(255, 69, 0, 0.1);
 }
 
 .achievementIcon {
@@ -209,6 +240,7 @@
     height: 20px;
     flex-shrink: 0;
     color: var(--color-red-primary);
+    filter: drop-shadow(0 0 4px rgba(255, 69, 0, 0.3));
 }
 
 @media (max-width: 768px) {
