@@ -5,36 +5,36 @@
  */
 
 :root {
-    /* Color Palette - Premium Black & Red Theme */
-    --color-black-pure: #000000;
-    --color-black-soft: #0A0A0A;
-    --color-gray-900: #111111;
-    --color-gray-800: #1A1A1A;
-    --color-gray-700: #2A2A2A;
-    --color-gray-600: #3A3A3A;
-    --color-gray-500: #666666;
-    --color-gray-400: #999999;
-    --color-gray-300: #CCCCCC;
+    /* Color Palette - Brightened Premium Theme */
+    --color-black-pure: #0A0A0F;
+    --color-black-soft: #12121A;
+    --color-gray-900: #1A1A24;
+    --color-gray-800: #252530;
+    --color-gray-700: #35353F;
+    --color-gray-600: #45454F;
+    --color-gray-500: #707080;
+    --color-gray-400: #A8A8B8;
+    --color-gray-300: #D8D8E8;
 
     --color-white-pure: #FFFFFF;
-    --color-white-soft: #F5F5F5;
+    --color-white-soft: #F8F8FA;
 
-    --color-red-primary: #FF4500;
-    --color-red-hover: #E03E00;
-    --color-red-light: #FF6633;
+    --color-red-primary: #FF5520;
+    --color-red-hover: #FF6A40;
+    --color-red-light: #FF7A55;
 
-    --color-text-primary: #FFFFFF;
-    --color-text-secondary: #A0A0A0;
-    --color-text-tertiary: #666666;
+    --color-text-primary: #F5F5FA;
+    --color-text-secondary: #C0C0D0;
+    --color-text-tertiary: #808090;
 
-    --color-bg-primary: #000000;
-    --color-bg-secondary: #0A0A0A;
-    --color-bg-elevated: #111111;
-    --color-bg-card: #0F0F0F;
+    --color-bg-primary: #0D0D15;
+    --color-bg-secondary: #15151F;
+    --color-bg-elevated: #1D1D28;
+    --color-bg-card: #18182;
 
-    --color-border-subtle: rgba(255, 255, 255, 0.08);
-    --color-border-default: rgba(255, 255, 255, 0.12);
-    --color-border-strong: rgba(255, 255, 255, 0.2);
+    --color-border-subtle: rgba(255, 255, 255, 0.12);
+    --color-border-default: rgba(255, 255, 255, 0.18);
+    --color-border-strong: rgba(255, 255, 255, 0.28);
     --color-border-accent: var(--color-red-primary);
 
     /* Typography - System Font Stack for Crisp Rendering */
@@ -109,12 +109,12 @@
     --space-40: 10rem;
     /* 160px */
 
-    /* Shadows - Subtle Depth */
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
-    --shadow-red-glow: 0 0 20px rgba(255, 69, 0, 0.15);
+    /* Shadows - Enhanced Depth with Red Glow */
+    --shadow-sm: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 8px -1px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 12px 20px -3px rgba(0, 0, 0, 0.4);
+    --shadow-xl: 0 24px 32px -5px rgba(0, 0, 0, 0.5);
+    --shadow-red-glow: 0 0 30px rgba(255, 85, 32, 0.25);
 
     /* Border Radius - Minimal Curves */
     --radius-none: 0;

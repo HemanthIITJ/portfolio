@@ -12,7 +12,7 @@ export interface PersonalInfo {
     email: string;
     dob: string;
     linkedin: string;
-    twitter: string;
+    x: string;
     github: string;
 }
 
@@ -67,7 +67,7 @@ export const personalInfo: PersonalInfo = {
     email: "kandimallahemanthies@gmail.com",
     dob: "17-May-1994",
     linkedin: "https://linkedin.com/in/hemanth-k-a88786215",
-    twitter: "https://x.com/Hemanth2022pee",
+    x: "https://x.com/Hemanth2022pee",
     github: "https://github.com/generalaimodels",
 };
 

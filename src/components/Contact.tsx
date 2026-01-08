@@ -78,14 +78,14 @@ const Contact: React.FC = () => {
                                 GitHub
                             </motion.a>
                             <motion.a
-                                href={personalInfo.twitter}
+                                href={personalInfo.x}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={styles.socialButton}
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
                             >
-                                Twitter
+                                X
                             </motion.a>
                         </div>
                     </motion.div>

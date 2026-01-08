@@ -1,0 +1,162 @@
+/**
+ * High-DPI Display Optimizations
+ * For Retina, 4K, and 8K displays
+ */
+
+/* High-resolution media queries */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+    body {
+        /* Enhanced rendering for Retina displays */
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+        text-rendering: geometricPrecision;
+    }
+
+    img,
+    picture,
+    video,
+    canvas {
+        /* Crisp image rendering on high-DPI */
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* 4K Display (3840x2160) */
+@media (min-width: 3840px) {
+    :root {
+        /* Scale up slightly for 4K displays */
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: clamp(4rem, 8vw, 8rem);
+    }
+
+    h2 {
+        font-size: clamp(3rem, 6vw, 6rem);
+    }
+
+    .container {
+        max-width: 3200px;
+    }
+}
+
+/* 8K Display (7680x4320) */
+@media (min-width: 7680px) {
+    :root {
+        /* Scale up for 8K displays */
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: clamp(5rem, 10vw, 12rem);
+    }
+
+    h2 {
+        font-size: clamp(4rem, 8vw, 10rem);
+    }
+
+    .container {
+        max-width: 6400px;
+        padding: 0 var(--space-40);
+    }
+
+    section {
+        padding: var(--space-40) 0;
+    }
+}
+
+/* Utility Classes for Premium Mobile Experience */
+.mobile-touch-target {
+    min-height: 48px;
+    min-width: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+    .mobile-stack {
+        flex-direction: row;
+    }
+}
+
+.mobile-center {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .mobile-center {
+        text-align: left;
+    }
+}
+
+/* Smooth scroll for anchors with offset for fixed header */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px;
+    }
+}
+
+/* Enhanced focus states for better accessibility */
+:focus-visible {
+    outline: 2px solid var(--color-red-primary);
+    outline-offset: 4px;
+    border-radius: var(--radius-sm);
+}
+
+/* Better mobile tap highlights */
+* {
+    -webkit-tap-highlight-color: rgba(255, 85, 32, 0.2);
+}
+
+/* Prevent zoom on input focus (iOS) */
+@media (max-width: 768px) {
+
+    input,
+    select,
+    textarea {
+        font-size: 16px !important;
+    }
+}
+
+/* Optimize animations for mobile */
+@media (max-width: 768px) {
+    * {
+        animation-duration: 0.3s !important;
+        transition-duration: 0.2s !important;
+    }
+}
+
+/* Premium loading states */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.skeleton-loading {
+    background: linear-gradient(90deg,
+            var(--color-gray-800) 0%,
+            var(--color-gray-700) 50%,
+            var(--color-gray-800) 100%);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite linear;
+}

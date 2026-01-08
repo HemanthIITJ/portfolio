@@ -89,8 +89,8 @@ const Hero: React.FC = () => {
                         <a href={personalInfo.github} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                             GitHub
                         </a>
-                        <a href={personalInfo.twitter} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-                            Twitter
+                        <a href={personalInfo.x} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                            X
                         </a>
                     </motion.div>
                 </motion.div>

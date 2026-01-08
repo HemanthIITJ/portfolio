@@ -37,7 +37,7 @@ html {
     }
 }
 
-/* Body - Pure Black Premium Background */
+/* Body - Brightened Premium Background */
 body {
     margin: 0;
     padding: 0;
@@ -46,9 +46,12 @@ body {
     font-weight: var(--font-weight-normal);
     line-height: var(--line-height-normal);
     color: var(--color-text-primary);
-    background-color: var(--color-black-pure);
+    background-color: var(--color-bg-primary);
     min-height: 100vh;
     overflow-x: hidden;
+    /* 8K Display Optimization */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
 }
 
 /* Typography - Clean Hierarchy */
@@ -177,12 +180,20 @@ select {
     background: var(--color-gray-600);
 }
 
-/* Container - Max Width for Content */
+/* Container - Max Width for Content with Enhanced Mobile Support */
 .container {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1600px;
+    /* Increased for 8K displays */
     margin: 0 auto;
-    padding: 0 var(--space-6);
+    padding: 0 var(--space-4);
+}
+
+/* Mobile-First Responsive Padding */
+@media (min-width: 480px) {
+    .container {
+        padding: 0 var(--space-6);
+    }
 }
 
 @media (min-width: 768px) {
@@ -203,18 +214,46 @@ select {
     }
 }
 
-/* Section Spacing */
+/* 4K+ Display Optimization */
+@media (min-width: 2560px) {
+    .container {
+        max-width: 2400px;
+        padding: 0 var(--space-24);
+    }
+}
+
+/* 8K Display Optimization */
+@media (min-width: 3840px) {
+    .container {
+        max-width: 3200px;
+        padding: 0 var(--space-32);
+    }
+}
+
+/* Section Spacing - Mobile-Optimized */
 section {
-    padding: var(--space-24) 0;
+    padding: var(--space-16) 0;
+}
+
+@media (min-width: 640px) {
+    section {
+        padding: var(--space-20) 0;
+    }
 }
 
 @media (min-width: 768px) {
+    section {
+        padding: var(--space-24) 0;
+    }
+}
+
+@media (min-width: 1024px) {
     section {
         padding: var(--space-32) 0;
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1536px) {
     section {
         padding: var(--space-40) 0;
     }
